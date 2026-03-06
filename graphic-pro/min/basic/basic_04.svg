@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="86.729px" viewBox="0 0 100 86.729" enable-background="new 0 0 100 86.729" xml:space="preserve">
+	 <linearGradient class="linearGradient" x1="0%" y1="0%" x2="0%" y2="100%" gradientTransform="translate(0.5,0.5) rotate(0) translate(-0.5,-0.5)">
+		<stop id="stop1" offset="0%" class="linearGradientColor1" stop-color="#05a" />
+		<stop id="stop2" offset="100%" class="linearGradientColor2" stop-color="#0a5"/>
+	</linearGradient>
+
+	<radialGradient class="radialGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+		<stop offset="0%" class="radialGradientColor1" stop-color="#05a"/>
+		<stop offset="100%" class="radialGradientColor2" stop-color="#0a5"/>
+	</radialGradient>
+	<clipPath id="f_round_hexagon" class="clipPath">
+		<path fill="none" stroke="#dddddd" stroke-width="1" stroke-miterlimit="10" d="M50,0c-0.943,0-1.856,0.183-2.505,0.5
+	L2.457,22.571C1.127,23.224,0,25.026,0,26.509v33.729c0,1.487,1.127,3.292,2.457,3.943l45.04,22.068c1.301,0.64,3.708,0.64,5.011,0
+	L97.543,64.18c1.332-0.651,2.457-2.455,2.457-3.943V26.509c0-1.481-1.127-3.284-2.457-3.938L52.506,0.501
+	C51.854,0.182,50.943,0,50,0z"/>
+	</clipPath>
+	<path class="fill-color" fill="#343C49" opacity="1" d="M50,0.867c-0.924,0-1.819,0.179-2.455,0.49L3.408,22.987C2.104,23.626,1,25.392,1,26.846v33.055
+	c0,1.457,1.104,3.226,2.408,3.864l44.14,21.627c1.274,0.627,3.633,0.627,4.911,0l44.134-21.628C97.897,63.125,99,61.358,99,59.9
+	V26.846c0-1.452-1.104-3.219-2.408-3.859L52.456,1.359C51.816,1.045,50.925,0.867,50,0.867z"/>
+	<path class="stroke-color" fill="none" stroke="#dddddd" stroke-width="0" stroke-miterlimit="10" d="M50,0c-0.943,0-1.856,0.183-2.505,0.5
+		L2.457,22.571C1.127,23.224,0,25.026,0,26.509v33.729c0,1.487,1.127,3.292,2.457,3.943l45.04,22.068c1.301,0.64,3.708,0.64,5.011,0
+		L97.543,64.18c1.332-0.651,2.457-2.455,2.457-3.943V26.509c0-1.481-1.127-3.284-2.457-3.938L52.506,0.501
+		C51.854,0.182,50.943,0,50,0z" clip-path="url(#f_round_hexagon)"/>
+</svg>

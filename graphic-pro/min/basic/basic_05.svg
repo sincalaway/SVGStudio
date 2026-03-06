@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="82.662px" viewBox="0 0 100 82.662" enable-background="new 0 0 100 82.662" xml:space="preserve">
+	 <linearGradient class="linearGradient" x1="0%" y1="0%" x2="0%" y2="100%" gradientTransform="translate(0.5,0.5) rotate(0) translate(-0.5,-0.5)">
+		<stop id="stop1" offset="0%" class="linearGradientColor1" stop-color="#05a" />
+		<stop id="stop2" offset="100%" class="linearGradientColor2" stop-color="#0a5"/>
+	</linearGradient>
+
+	<radialGradient class="radialGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+		<stop offset="0%" class="radialGradientColor1" stop-color="#05a"/>
+		<stop offset="100%" class="radialGradientColor2" stop-color="#0a5"/>
+	</radialGradient>
+	<clipPath id="f_tooltip" class="clipPath">
+		<path fill="none" stroke="#dddddd" stroke-width="1" stroke-miterlimit="10" d="M0,61.633V6.156C0,2.762,2.763,0,6.156,0h87.686
+	C97.237,0,100,2.762,100,6.156v55.477c0,3.319-2.604,6.019-5.922,6.143c-0.159,0.024-3.92,0.119-3.92,0.119l-17.625-0.105H60.18
+	l-0.265,0.656c-2.448,6.092-12.431,11.41-18.591,14.217c2.242-2.679,4.593-6.487,4.593-10.849c0-1.06-0.137-2.15-0.451-3.261
+	l-0.217-0.764H6.156C2.763,67.789,0,65.026,0,61.633z"/>
+	</clipPath>
+	<path class="fill-color" fill="#343C49" opacity="1" d="M1,61.228V6.859c0-3.326,2.708-6.033,6.033-6.033h85.932C96.292,0.826,99,3.533,99,6.859v54.367
+	c0,3.254-2.552,5.897-5.805,6.021c-0.154,0.021-3.84,0.115-3.84,0.115L72.083,67.26H59.625l-0.26,0.644
+	c-2.398,5.971-11.245,11.449-17.281,14.199c2.197-2.625,4.497-5.895,4.497-10.17c0-1.038-0.405-2.857-0.713-3.946l-0.212-0.749
+	L7.033,67.261C3.708,67.26,1,64.552,1,61.228z"/>
+	<path class="stroke-color" fill="none" stroke="#dddddd" stroke-width="0" stroke-miterlimit="10" d="M0,61.633V6.156C0,2.762,2.763,0,6.156,0h87.686
+		C97.237,0,100,2.762,100,6.156v55.477c0,3.319-2.604,6.019-5.922,6.143c-0.159,0.024-3.92,0.119-3.92,0.119l-17.625-0.105H60.18
+		l-0.265,0.656c-2.448,6.092-12.431,11.41-18.591,14.217c2.242-2.679,4.593-6.487,4.593-10.849c0-1.06-0.137-2.15-0.451-3.261
+		l-0.217-0.764H6.156C2.763,67.789,0,65.026,0,61.633z" clip-path="url(#f_tooltip)"/>
+</svg>

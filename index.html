@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>graphic-pro - 专业的Logo在线制作工具</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="graphic-pro是一个简单易用的免费logo在线制作平台。">
+
+    <link rel="shortcut icon" href="static/img/bg.png">
+    <link rel="stylesheet" href="static/css/app.css">
+
+    <script type="text/javascript">
+        // 全局 UI 状态控制
+        window.Loading = {
+            dom: null,
+            show: function () { if (this.dom) this.dom.style.visibility = 'visible'; },
+            hide: function () { if (this.dom) this.dom.style.visibility = 'hidden'; }
+        };
+    </script>
+
+    <style>
+        /* ==============================================
+           1. 全局与基础 UI 修复
+           ============================================== */
+        /* 针对左侧分类栏及基础列表 */
+        .category-list, .sidebar, .left-panel, aside, .menu-item, li {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
+
+        /* 针对顶部导航栏基础标签 */
+        header, .header, .top-bar, .nav, .navbar {
+            font-size: 18px !important;
+            font-weight: bold !important;
+            color: #ffffff !important;
+        }
+
+        /* 避免文字不可见，强制变白 (谨慎作用域) */
+        .sidebar span, .sidebar div, .header span, .header div {
+            color: #ffffff !important;
+        }
+
+        /* 全局文字阴影增加对比度，让它在黑背景下更清晰 */
+        * {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ==============================================
+           2. 顶部工具栏修复 (撤销、重做、下载)
+           ============================================== */
+        .header-toolbar-main {
+            color: #FFFFFF !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            opacity: 1 !important;
+            display: inline-flex !important;
+            align-items: center;
+        }
+
+        .header-toolbar-main span {
+            color: #FFFFFF !important;
+        }
+
+        .header-toolbar-main i {
+            font-size: 18px !important;
+            color: #FFFFFF !important;
+            margin-right: 4px;
+        }
+
+        /* ==============================================
+           3. 左侧侧边栏具体元素修复 (颜色方案、图像等)
+           ============================================== */
+        .icon-title {
+            color: #E0E0E0 !important;
+            font-size: 14px !important;
+            font-weight: bold !important;
+            text-shadow: none !important;
+            line-height: 1.5 !important;
+            margin-top: 5px;
+        }
+
+        .sub-nav-note i.iconfont {
+            color: #FFFFFF !important;
+            font-size: 24px !important;
+            margin-bottom: 5px;
+        }
+
+        /* ==============================================
+           4. LOGO 旁文字特效 (graphic-pro)
+           ============================================== */
+        #app-link a {
+            font-size: 30px !important;
+            font-weight: 900 !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            text-decoration: none !important;
+            /* 彩色渐变 (红 -> 紫 -> 蓝) */
+            background: linear-gradient(to right, #FF3B3B, #A020F0, #1E90FF) !important;
+            /* 把背景裁切进文字里 */
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            /* 文字本身变透明，透出背景 */
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <div id="myLoading" class="full-loading">
+        <div class="loader-panel">
+            <img src="static/img/loading.gif" alt="loading">
+        </div>
+    </div>
+    <canvas id="canvas_loading"></canvas>
+
+    <script src="lib/canvas.lib.min.js"></script>
+
+    <script type="text/javascript">
+        window.Loading.dom = document.getElementById('myLoading');
+    </script>
+
+    <script src="static/js/manifest.prod.js"></script>
+    <script src="static/js/vendor.prod.js"></script>
+    <script src="static/js/app.prod.js"></script>
+</body>
+</html>
