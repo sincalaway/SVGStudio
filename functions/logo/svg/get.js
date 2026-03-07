@@ -1,45 +1,46 @@
-// 引入我们在本地预生成的静态图标数据库
-import db from '../../../db.json';
-
-export async function onRequest(context) {
-    const { request } = context;
+// Cloudflare Pages Functions 原生写法
+export async function onRequestGet(context) {
+    const { request, env } = context;
     const url = new URL(request.url);
     
-    // 1. 获取前端传来的参数：分类名(k) 和 页码(p)
-    const category = url.searchParams.get('k'); 
-    const page = parseInt(url.searchParams.get('p')) || 1; // 默认第 1 页
-    const pageSize = 20; // 每页加载 20 个，与本地保持一致
+    // 获取前端传来的分类和页码
+    const category = url.searchParams.get('k');
+    const page = parseInt(url.searchParams.get('p')) || 1;
+    const pageSize = 20;
 
-    // 跨域头配置
-    const corsHeaders = {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json'
-    };
+    try {
+        // 🌟 核心魔法：向 Cloudflare 请求我们根目录的静态文件 db.json
+        const dbUrl = new URL('/db.json', request.url);
+        const response = await env.ASSETS.fetch(dbUrl);
+        const db = await response.json();
 
-    // 校验分类是否存在
-    if (!category || !db[category]) {
-        return new Response(JSON.stringify({ code: 404, msg: '找不到分类', data: [] }), { headers: corsHeaders });
+        // 如果找不到分类
+        if (!db[category]) {
+            return new Response(JSON.stringify({ code: 404, msg: '找不到该分类', data: [] }), {
+                headers: { 'Content-Type': 'application/json;charset=UTF-8' }
+            });
+        }
+
+        // 分页逻辑
+        const allFiles = db[category];
+        const startIndex = (page - 1) * pageSize;
+        const paginatedFiles = allFiles.slice(startIndex, startIndex + pageSize);
+
+        // 加上魔法垫片 xxx 返回给前端
+        const svgList = paginatedFiles.map(file => `xxx${file}`);
+
+        return new Response(JSON.stringify({
+            code: 200,
+            msg: 'success',
+            data: svgList
+        }), {
+            headers: { 'Content-Type': 'application/json;charset=UTF-8' }
+        });
+        
+    } catch (err) {
+        // 如果出错，返回错误信息方便排查
+        return new Response(JSON.stringify({ code: 500, msg: '服务器读取JSON失败: ' + err.message, data: [] }), {
+            headers: { 'Content-Type': 'application/json;charset=UTF-8' }
+        });
     }
-
-    // 2. 从 JSON 中取出该分类下的【所有】图标数组
-    const allFiles = db[category];
-
-    // ==========================================
-    // 🌟 同步新增的分页逻辑
-    // ==========================================
-    const startIndex = (page - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    
-    // 切割数组，只取前端当前请求的那一页数据
-    const paginatedFiles = allFiles.slice(startIndex, endIndex);
-
-    // 3. 应用 "魔法垫片" 防砍策略
-    const svgList = paginatedFiles.map(file => `xxx${file}`);
-
-    // 4. 返回分页后的数据
-    return new Response(JSON.stringify({
-        code: 200,
-        msg: 'success',
-        data: svgList
-    }), { headers: corsHeaders });
 }
