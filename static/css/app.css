@@ -4095,7 +4095,7 @@ fieldset[disabled] .multiselect {
 }
 
 .sng .right-btn .payitem.loading[data-v-497f5e95] {
-    background-image: url(http://localhost:3000/qrdream/static/theme/default/loading-2.gif);
+    background-image: url(/qrdream/static/theme/default/loading-2.gif);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto
@@ -4132,7 +4132,7 @@ fieldset[disabled] .multiselect {
     right: 0;
     z-index: 2222;
     background-color: hsla(0, 0%, 100%, .87);
-    background-image: url(http://localhost:3000/qrdream/static/theme/default/loading-2.gif);
+    background-image: url(/qrdream/static/theme/default/loading-2.gif);
     background-position: 50%;
     background-repeat: no-repeat;
     position: absolute
@@ -6096,7 +6096,7 @@ fieldset[disabled] .multiselect {
 }
 
 .toolbar--text--family .font-image-panel[data-v-3d13ddef] {
-    background-image: url(http://localhost:3000/qrdream/font/font.png);
+    background-image: url(/qrdream/font/font.png);
     background-repeat: no-repeat;
     height: 25px;
     position: relative;
@@ -6298,7 +6298,7 @@ fieldset[disabled] .multiselect {
     height: auto;
     float: left;
     display: block;
-    background: url(http://localhost:3000/graphic-pro/graphic-pro-512-512.png);
+    background: url(/graphic-pro/graphic-pro-512-512.png);
     width: 145px;
     margin-top: -7px;
     background-position: 0 0;
